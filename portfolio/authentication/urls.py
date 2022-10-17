@@ -5,8 +5,8 @@ urlpatterns = [
     #path('new/',views.employee),
     # path('',views.home,name='home'),
     # path('about/',views.aboutus, name='about'),
-    path('',views.login,name='login'),
-    path('registration/',views.registration,name='registration'),
-    path('forget-password',views.forgetpassword,name='forgetpassword'),
-
+    path('',views.authlogin,name='login'),
+    path('registration/',views.authregistration,name='registration'),
+    path('forget-password/',views.forgetpassword,name='forgetpassword'),
+    path('logout/',views.authlogout,name='logout')
 ]

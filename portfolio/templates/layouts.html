@@ -78,7 +78,12 @@
           <li><a href="pricing.html ">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="{% url 'contact' %}">Contact</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'profile' %}">My Profile</a></li>
+          {% else %}
           <li><a href="{% url 'login' %}">My Account</a></li>
+          {% endif %}
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
