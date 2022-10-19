@@ -35,19 +35,10 @@ def authregistration(request):
             else:
                 user=User.objects.create_user(username=username,password=password,email=email)
                 user.save()
-                return redirect('profile')
-                
-                
+                return redirect('profile')   
         else:
             messages.error(request,'Password and Confirm Password Not Matched')
             
-         
-        
-        
-         
-        
-        
-        
     return render(request,'authentication/registration.html')
 
 def forgetpassword(request):
