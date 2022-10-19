@@ -23,7 +23,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('/',views.home), #empty and / means this is our home directory
-    #path('home/',views.home),
+    path('home/',views.home),
 
     #path('',views.home,name='home'),
     path('',include('index.urls')),

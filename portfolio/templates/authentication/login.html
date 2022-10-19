@@ -80,7 +80,17 @@ This is Login Page
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-4">
-            <h2>Login Your Account</h2>
+            <h2>Login Your Account</h2><br>
+             
+            {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+               {{ message }}
+         </div>
+              {% endfor %}
+
             <form action="" method="post" >
               {% csrf_token %}
               <div class="form-group">
@@ -92,16 +102,16 @@ This is Login Page
 
             <div class="form-group">
               <input type="password" name="password" class="form-control" id="name" placeholder="Your Password" required>
-              <div class="validate"></div>
+              <div clas s="validate"></div>
             </div>
              <br>
-            <small>Forget My <a href="#">Password</a> </small><br>
+            <small>Forget My <a href="{% url 'forgetpassword' %}">Password</a> </small><br>
 
               <div class="text-center">
                 <button class="btn btn-success" type="submit">Login</button>
               </div>
             </form><br>
-            <small>Don't have an Account <a href="#">Register Now</a> </small>
+            <small>Don't have an Account <a href="{% url 'registration' %}">Register Now</a> </small>
           </div>
 
         </div>

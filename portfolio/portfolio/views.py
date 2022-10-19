@@ -10,7 +10,7 @@ def home(request):
     # 'phone' : 9267975616,
     # 'friend_name': ['rmapati','nikhil', 'apoorva', 'ayush']
     # }
-    return render(request,'index.html',) #we have to allocate it to the django to imform him that
+    return render(request,'layout.html',) #we have to allocate it to the django to imform him that
     #return HttpResponse("This is our home page")
 
 def about(request):

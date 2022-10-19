@@ -5,3 +5,4 @@ urlpatterns = [
     path('new/',views.employee),
     path('profile/',views.profile,name='profile'),
 ]
+ 
